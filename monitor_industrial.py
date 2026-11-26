@@ -30,6 +30,7 @@ def validar_leitura(motor):
 
 def obter_leituras_validas(lista_motores):
     return [m for m in lista_motores if validar_leitura(m)]
+
 def analisar_alertas(motor):
     alertas = []
     if motor["temperatura"] > LIMITES["temperatura_max"]:
