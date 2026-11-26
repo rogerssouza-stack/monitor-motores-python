@@ -49,6 +49,7 @@ def analisar_alertas(motor):
         status = "CRITICO"
 
     return status, alertas
+
 def calcular_estatisticas(motores):
     total = len(motores)
     if total == 0:
