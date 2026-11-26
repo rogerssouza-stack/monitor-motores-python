@@ -29,3 +29,22 @@ def validar_leitura(motor):
 
 def obter_leituras_validas(lista_motores):
     return [m for m in lista_motores if validar_leitura(m)]
+def analisar_alertas(motor):
+    alertas = []
+    if motor["temperatura"] > LIMITES["temperatura_max"]:
+        alertas.append(f"Superaquecimento ({motor['temperatura']:.1f} C)")
+    if motor["corrente"] > LIMITES["corrente_max"]:
+        alertas.append(f"Sobrecorrente ({motor['corrente']:.1f} A)")
+    if motor["vibracao"] > LIMITES["vibracao_max"]:
+        alertas.append(f"Vibracao elevada ({motor['vibracao']:.1f} mm/s)")
+    if motor["rpm"] < LIMITES["rpm_min"] or motor["rpm"] > LIMITES["rpm_max"]:
+        alertas.append(f"Rotacao fora da faixa ({motor['rpm']} RPM)")
+
+    if len(alertas) == 0:
+        status = "NORMAL"
+    elif len(alertas) == 1:
+        status = "ATENCAO"
+    else:
+        status = "CRITICO"
+
+    return status, alertas
