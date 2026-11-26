@@ -98,3 +98,4 @@ def exibir_painel(motores):
 if __name__ == "__main__":
     motores_validos = obter_leituras_validas(LEITURAS_MOTORES)
     exibir_painel(motores_validos)
+    
