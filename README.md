@@ -14,7 +14,6 @@ __* Após isso ele vai calcular as estatisticas calculando o total de motores,fa
 # Última parte da explicação #
 _ Após isso ele vai exibir as informações em um painel onde vai mostrar o nome do sistema e a versão do mesmo mostrando data e hora e nesse mesmo painel vai ter a analise de alertas dos motores e após isso vai dar um resumo disso mostrado o numero de motores, a media de temperatura, corrente e potencia alem de mostrar a maior temperatura e vai exibir os motores válidos _
 
-
 ~~~ Escrito por João ~~~
 ** Escrito por Roger **
 :muscle
