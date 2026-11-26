@@ -67,6 +67,7 @@ def calcular_estatisticas(motores):
         "potencia_total_kw": round(potencia_total, 2),
         "motor_mais_quente": maior_temp["id"],
     }
+
 def exibir_painel(motores):
     print("=" * 64)
     print(f"{SISTEMA_NOME} - v{VERSAO}")
@@ -93,7 +94,6 @@ def exibir_painel(motores):
         f"Maior temp.: {stats['motor_mais_quente']}"
     )
     print("=" * 64)
-
 
 if __name__ == "__main__":
     motores_validos = obter_leituras_validas(LEITURAS_MOTORES)
